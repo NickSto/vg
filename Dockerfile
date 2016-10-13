@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER Erik Garrison <erik.garrison@gmail.com>
 
@@ -12,26 +12,21 @@ COPY Makefile /app/Makefile
 
 # Install vg dependencies and clear the package index
 RUN \
-    echo "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y \
         build-essential \
-        gcc4.9 \
-        g++4.9 \
         pkg-config \
-        jq/trusty-backports \
+        jq \
         sudo && \
     make get-deps && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
     
 # Move in all the other files
 COPY . /app
     
 # Build vg
-RUN . ./source_me.sh && make -j8
-
-# Make tests. We can't do it in parallel since it cleans up the test binary
-RUN make test
+RUN . ./source_me.sh && make -j2
 
 ENV LD_LIBRARY_PATH=/app/lib
 
