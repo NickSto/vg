@@ -1,0 +1,15 @@
+##fileformat=VCFv4.1
+##fileDate=20160826
+##source=Naive Variant Caller version 0.0.2
+##reference=file://pipeline/SC8C1-bl.bt2.--rdg3,3--rfg3,3/asm.fa
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=AC,Number=.,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##FORMAT=<ID=AF,Number=.,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##FORMAT=<ID=NC,Number=.,Type=String,Description="Nucleotide and indel counts">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	__NONE__
+SC8-ch	8268	.	TAGC	T	.	.	AC=217,2,2;AF=0.0645065398335,0.000594530321046,0.000594530321046	GT:AC:AF:NC	0/0:217,2,2:0.0645065398335,0.000594530321046,0.000594530321046:+d2=1,+d3=122,+T=1113,-d2=1,-d3=95,-C=2,-T=2030,
+SC8-ch	8271	.	C	CACCCCCTCT,CT,CCCCTCT	.	.	AC=88,53,4,4,1;AF=0.0345368916797,0.0208006279435,0.00156985871272,0.00156985871272,0.000392464678179	GT:AC:AF:NC	0/0:88,53,4,4,1:0.0345368916797,0.0208006279435,0.00156985871272,0.00156985871272,0.000392464678179:+C=868,+T=30,+CCCCTCT=2,+CACCCCCTCT=44,+CT=2,-C=1530,-G=1,-CCCCTCT=2,-CACCCCCTCT=44,-T=23,-CT=2,
+SC8-ch	8289	.	TAGA	TA,T,TGA	.	.	AC=121,4,2,1,1;AF=0.0504376823677,0.00166736140058,0.000833680700292,0.000416840350146,0.000416840350146	GT:AC:AF:NC	0/0:121,4,2,1,1:0.0504376823677,0.00166736140058,0.000833680700292,0.000416840350146,0.000416840350146:+d1=1,+d2=37,+C=1,+T=1131,-d2=84,-d3=4,-C=1,-G=1,-T=1139,
+SC8-ch	8290	.	AGAG	A,AAG	.	.	AC=187,28;AF=0.0783082077052,0.0117252931323	GT:AC:AF:NC	0/0:187,28:0.0783082077052,0.0117252931323:+A=1114,+d1=6,+d3=53,-A=1059,-d1=22,-d3=134,
